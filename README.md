@@ -1,0 +1,1 @@
+# friendly-shariah-compliant-screener
