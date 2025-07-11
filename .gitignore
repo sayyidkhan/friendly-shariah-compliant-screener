@@ -1,0 +1,5 @@
+output/
+.DS_Store
+src/assets/shariah_stock_data.json
+src/assets/shariah_stock_list.csv
+node_modules/
