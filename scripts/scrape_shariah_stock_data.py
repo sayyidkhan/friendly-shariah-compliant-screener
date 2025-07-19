@@ -92,7 +92,7 @@ if __name__ == "__main__":
     stock_data = get_all_stock_links()
     
     # Temporarily limiting to 10 stocks for testing
-    stock_data = stock_data[:10]
+    #stock_data = stock_data[:10]
 
     print(f"Found {len(stock_data)} stock links. Now retrieving compliance status for all {len(stock_data)} stocks concurrently...")
 
