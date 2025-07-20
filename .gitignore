@@ -3,6 +3,7 @@ output/
 src/assets/shariah_stock_data.json
 src/assets/shariah_stock_list.csv
 node_modules/
+public/
 
 # environment variables
 .env

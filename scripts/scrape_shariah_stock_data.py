@@ -83,10 +83,10 @@ if __name__ == "__main__":
     project_root = os.path.dirname(script_dir)
     
     output_dir = os.path.join(project_root, "output")
-    assets_dir = os.path.join(project_root, "src", "assets")
+    public_dir = os.path.join(project_root, "public")
     
     os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(assets_dir, exist_ok=True)
+    os.makedirs(public_dir, exist_ok=True)
 
     print("Starting to scrape all stock links...")
     stock_data = get_all_stock_links()
@@ -110,7 +110,7 @@ if __name__ == "__main__":
                 print(f"Error for {stock['ticker']}: {exc}")
 
     # Save to CSV
-    csv_filename = os.path.join(assets_dir, "shariah_stock_list.csv")
+    csv_filename = os.path.join(public_dir, "shariah_stock_list.csv")
     with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["ticker", "company_name", "compliance", "link"])
@@ -119,5 +119,5 @@ if __name__ == "__main__":
     print(f"CSV file saved to {csv_filename}")
 
     # Convert to JSON for the frontend
-    json_filename = os.path.join(assets_dir, "shariah_stock_data.json")
+    json_filename = os.path.join(public_dir, "shariah_stock_data.json")
     convert_to_json(stock_data, json_filename)
